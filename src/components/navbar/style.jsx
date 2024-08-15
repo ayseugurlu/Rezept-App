@@ -8,6 +8,8 @@ background-color: seagreen;
     align-items: center;
     padding: 0.5rem;
     box-sizing: border-box;
+    height: 20vh;
+    
     
     
     
@@ -28,11 +30,7 @@ export const MyNavLink=styled(NavLink)`
     `;
 
 export const LogoDiv=styled.div`
-    font-size:2rem;
-    border: ${({logo})=> logo? "1px solid white": "none"};
-    border-radius: 60%;
-    box-shadow: 2px 2px  20px inset white ;
-    padding: 0 1rem ;
+    
     padding-top: 1rem;
     
 `;

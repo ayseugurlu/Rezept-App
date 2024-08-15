@@ -1,19 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/logo.webp";
+import logo from "../../assets/logo.png";
 import NavDiv, { LogoDiv, MyNavLink } from "./style";
 
 const Navbar = () => {
   return (
-    <div>
-      <nav>
+    
+      
         <NavDiv>
         
         <LogoDiv logo>
         
           <MyNavLink logo to="/">
-            <img src={logo} alt="" width="50px" />
-            <p>MealMuse</p>
+            <img src={logo} alt="" width="200px" />
           </MyNavLink>
 
           </LogoDiv>
@@ -21,24 +20,23 @@ const Navbar = () => {
 
           <div>
             <ul>
-              <MyNavLink className="nav-link"  to="/">
+              <MyNavLink  to="/">
                 HOME
               </MyNavLink>
-              <MyNavLink className="nav-link" to="/about">
+              <MyNavLink  to="/recipes">
+                RECIPES
+              </MyNavLink>
+              <MyNavLink  to="/about">
                 ABOUT
               </MyNavLink>
-              <MyNavLink className="nav-link" to="/register">
-                REGISTER
-              </MyNavLink>
-              <MyNavLink className="nav-link" to="/login" >
+              <MyNavLink  to="/login" >
                 LOGIN
               </MyNavLink>
             </ul>
           </div>
 
         </NavDiv>
-      </nav>
-    </div>
+      
   );
 };
 

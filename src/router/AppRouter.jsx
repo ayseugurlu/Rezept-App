@@ -5,6 +5,8 @@ import Home from '../pages/home/Home'
 import About from '../pages/about/About'
 import Login from '../pages/login/Login'
 import Details from '../pages/details/Details'
+import Recipe from '../pages/home/Recipe'
+import PrivateRouter from './PrivateRouter'
 
 const AppRouter = () => {
   return (
@@ -12,7 +14,11 @@ const AppRouter = () => {
         <Navbar/>
 
         <Routes>
-        <Route path="/" element={<Home/>} />
+        <Route exact path="/" element={<Home/>} />
+        <Route path='/recipes' element={<PrivateRouter/>}>
+           <Route path="" element={<Recipe/>} />
+        </Route>
+        
         <Route path="/about" element={<About/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/details" element={<Details/>} />

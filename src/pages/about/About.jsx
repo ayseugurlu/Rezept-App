@@ -11,7 +11,7 @@ const About = () => {
         <h2>Hi! I am AYSE</h2>
         <h3>I am currently learning Full Stack Development Languages.</h3>
         <h4>I've already known HTML,CSS, JS, ReactJS.</h4>
-        <h2><a href="mailto:ayseugurlu@gmail.com">Send Email</a> : ayseugurlu@gmail.com</h2>
+        <h2><a style={{textDecoration:"none", color:"orange"}} href="https://github.com/ayseugurlu">Go GitHub : </a> https://github.com/ayseugurlu</h2>
 
       </InfoDiv>
     </AboutDiv>
