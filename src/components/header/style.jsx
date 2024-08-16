@@ -8,20 +8,8 @@ const FormDiv = styled.div`
   padding: 1rem;
   border-radius: 1rem;
   background-color: rgba(0,0,0,0.8);
-  /* margin:0 5rem; */
-  /* max-width: 200rem; */
-  /* width: 30rem; */
-  /* min-width: 496px; */
-
-  @media (max-width: 768px){
-    width: 90%; 
-    padding: 1rem;
-    box-sizing: border-box;
-        
-       
-    }
   
-
+  
 `;
 
 export const FormArea = styled.form`
@@ -32,7 +20,8 @@ export const FormArea = styled.form`
     @media (max-width:768px){
         flex-direction: column; 
         align-items: center; 
-        gap: 0.5rem; 
+        gap: 0.8rem; 
+        padding: 0.5rem;
         
     }
     
@@ -46,10 +35,10 @@ export const FormArea = styled.form`
         text-indent: 8px;
 
         @media (max-width:768px){
-          width: 80%;
+          width: 90%;
           padding: 0.5rem;
-          text-indent: 3px;
-          font-size: 0.8rem;
+          text-indent: 5px;
+          
         }
     }
 
@@ -62,7 +51,7 @@ export const FormArea = styled.form`
         font-size: 0.8rem;
 
         @media (max-width:768px){
-            width: 50%;
+            width: 30%;
             padding: 0.5rem;
             
         }
@@ -77,10 +66,10 @@ export const FormArea = styled.form`
         text-transform: uppercase;
 
         @media (max-width:768px){
-            width: 80%;
-            font-size: 0.8rem;
-            padding: 0.5rem;
+            width: 90%;
+            padding: 0.5rem ;
             text-align: center;
+            
         }
 
         
@@ -102,8 +91,8 @@ export const HeaderDiv=styled.div`
         color: white;
 
         @media (max-width: 768px) {
-      font-size: 2rem; 
-    }
+            font-size: 2rem; 
+        }
 
     }
 
@@ -131,7 +120,7 @@ export const HeaderDiv=styled.div`
     }
 
     @media (max-width: 768px) {
-      width: 80%; 
+      width: 40%; 
       font-size: 1rem; 
     }
     
@@ -141,11 +130,6 @@ export const HeaderDiv=styled.div`
 export const HomeNavLink=styled(NavLink)`
     color: white;
     text-decoration: none;
-
-
-  @media (max-width: 768px) {
-    font-size: 1rem; 
-  }
 
 
 `;

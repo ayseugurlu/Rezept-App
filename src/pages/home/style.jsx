@@ -28,26 +28,21 @@ export const RecipeContainer= styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover; 
-    object-fit: center;
     padding: 3rem;
     min-height: 80vh;
 
     @media (max-width: 768px) {
     padding: 1.5rem;
-    background-attachment: scroll;
+   
   }
     
    
 `;
 
 export const RecipeCardContainer = styled.div`
-    /* background: url("https://cdn.pixabay.com/photo/2017/04/27/08/18/champagne-2264811_1280.jpg"); */
-    /* background-size: cover; */
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 1rem;
-    /* width: 100vw; */
+    justify-content: space-around;
     margin-top: 2rem;
 
     @media (max-width: 768px) {
@@ -67,7 +62,6 @@ export const Cards = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     border-radius: 2rem;
     
 
@@ -76,10 +70,14 @@ export const Cards = styled.div`
         height: 300px;
         border-radius: 2rem;
         border: 2px solid orange;
+        margin-top: 1rem;
+       
+        
 
     @media (max-width: 768px) {
-      /* width: 80%; */
-      /* height: auto; */
+      width: 250px;
+      height: 250px;
+      border: 2px solid green;
     }
     }
 
@@ -88,7 +86,7 @@ export const Cards = styled.div`
         text-align: center;
 
         @media (max-width: 768px) {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
     }
 
@@ -101,6 +99,7 @@ export const Cards = styled.div`
         color: white;
         text-transform: uppercase;
         font-weight: 700;
+        margin-bottom: 1rem;
 
         &:hover{
           background-color: white;
@@ -108,7 +107,7 @@ export const Cards = styled.div`
         }
 
         @media (max-width: 768px) {
-             width: 4rem;
+          
              padding: 0.5rem;
         }
         
@@ -121,7 +120,7 @@ export const Cards = styled.div`
 
 
     @media (max-width: 768px) {
-    width: 90%;
+   
     height: auto;
     margin-bottom: 1.5rem;
   }
