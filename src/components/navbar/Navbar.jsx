@@ -1,9 +1,13 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
 import logo from "../../assets/logo.png";
-import NavDiv, { LogoDiv, MyNavLink } from "./style";
+import NavDiv, { Hamburger, LogoDiv, Menu, MyNavLink } from "./style";
+import { RxHamburgerMenu } from "react-icons/rx";
+
+
 
 const Navbar = () => {
+
+  const [open,setOpen]=useState(true)
   return (
     
       
@@ -16,10 +20,14 @@ const Navbar = () => {
           </MyNavLink>
 
           </LogoDiv>
+
+          <Hamburger onClick={()=> setOpen(!open)}>
+          <RxHamburgerMenu />
+          </Hamburger>
          
 
-          <div>
-            <ul>
+          <Menu osman={open} onClick={()=> setOpen(!open)}>
+            
               <MyNavLink  to="/">
                 HOME
               </MyNavLink>
@@ -32,8 +40,8 @@ const Navbar = () => {
               <MyNavLink  to="/login" >
                 LOGIN
               </MyNavLink>
-            </ul>
-          </div>
+            
+          </Menu>
 
         </NavDiv>
       

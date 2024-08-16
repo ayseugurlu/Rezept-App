@@ -1,8 +1,9 @@
 import React, { useContext } from 'react'
 import { RecipeContext } from '../../context/RecipeProvider'
-import { Cards, RecipeCardContainer, RecipeContainer } from './style'
-import Details from '../details/Details'
-import { useNavigate } from 'react-router-dom'
+import { Cards, RecipeCardContainer} from './style'
+import {useNavigate } from 'react-router-dom'
+
+
 
 const RecipeCard = () => {
 
@@ -11,14 +12,14 @@ const RecipeCard = () => {
 
   const navigate=useNavigate()
 
-  console.log(recipe)
+ 
   return (
     <RecipeCardContainer>
     {recipe.map(({recipe})=>(
       <Cards>
       <img src={recipe.image} alt="" />
         <h1>{recipe.label}</h1>
-        <button onClick={(e)=>navigate("/details")}>Details</button>
+        <button onClick={(e)=>navigate("/details", {state:{recipe}})}>Details</button>
       </Cards>
     ))}
 

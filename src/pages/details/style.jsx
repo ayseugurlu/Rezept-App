@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 export const DetailsContainer=styled.div`
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.45)), url("https://cdn.pixabay.com/photo/2016/03/26/22/58/food-1281742_1280.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.65)), url("https://cdn.pixabay.com/photo/2016/06/29/06/14/thai-ingredient-1486055_1280.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -14,7 +14,6 @@ export const DetailsContainer=styled.div`
         background-color: rgba(0, 0,0, 0.1);
         display: flex;
         flex-direction: column;
-        align-items: center;
         border-radius: 1rem;
         
 
@@ -24,13 +23,19 @@ export const DetailsContainer=styled.div`
         width: 300px;
         height: 300px;
         /* border: 2px solid yellow; */
-        padding:0 2rem;
-        border-radius: 7rem;
+        /* padding:0 3rem; */
+        border-radius: 2rem;
+        border: 1px solid white;
+        margin: auto;
+
 
     }
 
+
     h1{
         color: coral;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
     p{
@@ -40,17 +45,37 @@ export const DetailsContainer=styled.div`
         
         h3{
             font-size: 1.2rem;
+            color: coral;
         }
 
     }
 
     ul{
         
-        list-style: circle;
+        
+        list-style: square;
         font-size: large;
+        color: aliceblue;
+        
 
     }
 
+`;
+
+export const SpanDiv=styled.div`
+    text-align: center;
+    margin: 1rem;
+   
+    button{
+        
+        margin: 1rem;
+        padding: 0.5rem;
+        border-radius: 5px;
+        border: none;
+        background-color: #DAB520;
+        color: white;
+        font-family: monospace;
+    }
 `;
 
 

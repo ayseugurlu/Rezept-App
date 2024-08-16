@@ -9,10 +9,7 @@ const Home = () => {
 
     <HomeDiv>
       <Header/>
-    </HomeDiv>
-
-    <RecipeCard/>
-        
+    </HomeDiv>    
         
     </div>
   )

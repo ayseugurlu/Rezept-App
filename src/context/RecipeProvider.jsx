@@ -1,55 +1,68 @@
-import React, { createContext, useEffect, useState } from 'react'
-import axios from "axios"
+import React, { createContext, useState } from "react";
+import axios from "axios";
 
 
+export const RecipeContext = createContext();
 
-export const RecipeContext = createContext()
-
-const RecipeProvider = ({children}) => {
-
+const RecipeProvider = ({ children }) => {
   //^ login icin gerekli usestateler
-  const [name,setName]=useState(localStorage.getItem("username") || "")
-  const [password,setPassword] = useState(localStorage.getItem("password") || "" )
+  const [name, setName] = useState(localStorage.getItem("username") || "");
+  const [password, setPassword] = useState(
+    localStorage.getItem("password") || ""
+  );
 
-    const [recipe,setRecipe]=useState([])
-    const [error, setError]=useState(false)
-    const [loading, setLoading]=useState(false)
-    const [query, setQuery]=useState('')
-    const [mealType, setMealType]=useState('Breakfast')
+  const [recipe, setRecipe] = useState([]);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [query, setQuery] = useState("");
+  const [mealType, setMealType] = useState("Breakfast");
 
-    const API_ID="1d48cbd9";
-    const API_KEY="8808cb4be21ee03b04baabe10ec9a1b7"
+  const API_ID = "1d48cbd9";
+  const API_KEY = "8808cb4be21ee03b04baabe10ec9a1b7";
 
-    const getData =async ()=>{
-        try {
-            const {data} = await axios(`https://api.edamam.com/search?q=${query}&app_id=${API_ID}&app_key=${API_KEY}&mealType=${mealType}`);
+  const getData = async () => {
+    setLoading(true);
+    try {
+      const { data } = await axios(
+        `https://api.edamam.com/search?q=${query}&app_id=${API_ID}&app_key=${API_KEY}&mealType=${mealType}`
+      );
 
-            setRecipe(data.hits)
-            setLoading(false)
-            
-        } catch (error) {
-            setError(true)
-            
-        }
+      setRecipe(data.hits);
+    } catch (error) {
+      setError(true);
+    } finally {
+      setLoading(false);
     }
+  };
 
-    
+  if (error) {
+    return (
+      <img src="https://cdn.dribbble.com/users/1138875/screenshots/4669703/404_animation.gif" alt="" />
+    );
+  }
 
-    // console.log();
+  if (loading) {
+    return (
+      <img src="https://loading.io/assets/mod/spinner/spinner/lg.gif" alt="" />
+    );
+  }
+
   return (
-    <RecipeContext.Provider value={{
-      name,
-      password,
-      setName,
-      setPassword,
-      setQuery,
-      setMealType,
-      recipe,
-      getData,}}>
-    {children}
-
+    <RecipeContext.Provider
+      value={{
+        name,
+        password,
+        setName,
+        setPassword,
+        setQuery,
+        setMealType,
+        recipe,
+        getData,
+      }}
+    >
+      {children}
     </RecipeContext.Provider>
-  )
-}
+  );
+};
 
-export default RecipeProvider
+export default RecipeProvider;

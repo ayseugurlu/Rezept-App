@@ -8,10 +8,18 @@ const FormDiv = styled.div`
   padding: 1rem;
   border-radius: 1rem;
   background-color: rgba(0,0,0,0.8);
-  margin:0 5rem;
+  /* margin:0 5rem; */
   /* max-width: 200rem; */
   /* width: 30rem; */
-  min-width: 496px;
+  /* min-width: 496px; */
+
+  @media (max-width: 768px){
+    width: 90%; 
+    padding: 1rem;
+    box-sizing: border-box;
+        
+       
+    }
   
 
 `;
@@ -20,6 +28,13 @@ export const FormArea = styled.form`
     display: flex;
     justify-content: space-around;
     gap: 1rem;
+
+    @media (max-width:768px){
+        flex-direction: column; 
+        align-items: center; 
+        gap: 0.5rem; 
+        
+    }
     
 
     input{
@@ -27,7 +42,15 @@ export const FormArea = styled.form`
         height: 30px;
         border-radius: 1rem;
         border: none;
-        padding: 10px 1.5rem;
+        padding: 10px;
+        text-indent: 8px;
+
+        @media (max-width:768px){
+          width: 80%;
+          padding: 0.5rem;
+          text-indent: 3px;
+          font-size: 0.8rem;
+        }
     }
 
     button{
@@ -36,6 +59,13 @@ export const FormArea = styled.form`
         border: none;
         width: 10rem;
         color: white;
+        font-size: 0.8rem;
+
+        @media (max-width:768px){
+            width: 50%;
+            padding: 0.5rem;
+            
+        }
     }
 
     select{
@@ -45,6 +75,13 @@ export const FormArea = styled.form`
         background-color: orange;
         color: white;
         text-transform: uppercase;
+
+        @media (max-width:768px){
+            width: 80%;
+            font-size: 0.8rem;
+            padding: 0.5rem;
+            text-align: center;
+        }
 
         
     }
@@ -64,10 +101,19 @@ export const HeaderDiv=styled.div`
         font-size: 3rem;
         color: white;
 
+        @media (max-width: 768px) {
+      font-size: 2rem; 
+    }
+
     }
 
     p{
         font-size: 1.2rem;
+
+        @media (max-width: 768px) {
+            font-size: 1rem;
+        }
+
     }
 
     button{
@@ -83,6 +129,11 @@ export const HeaderDiv=styled.div`
             opacity: 1;
         
     }
+
+    @media (max-width: 768px) {
+      width: 80%; 
+      font-size: 1rem; 
+    }
     
     }
 `;
@@ -90,6 +141,11 @@ export const HeaderDiv=styled.div`
 export const HomeNavLink=styled(NavLink)`
     color: white;
     text-decoration: none;
+
+
+  @media (max-width: 768px) {
+    font-size: 1rem; 
+  }
 
 
 `;

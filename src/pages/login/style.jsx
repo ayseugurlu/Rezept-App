@@ -45,6 +45,13 @@ export const FormLogin = styled.form`
         width: 10rem;
         color: white;
         padding: 1rem;
+        opacity: 0.8;
+
+        &:hover{
+          opacity: 1;
+          cursor: pointer;
+          background-color: green;
+        }
         
     }
 

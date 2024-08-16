@@ -6,11 +6,17 @@ export const HomeDiv = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 80vh;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0.9;
+
+  @media (max-width:768px){
+    background-size: cover;
+    height: 60vh;
+        
+    }
   
   
   
@@ -24,8 +30,12 @@ export const RecipeContainer= styled.div`
     background-size:cover; 
     object-fit: center;
     padding: 3rem;
+    min-height: 80vh;
 
-    /* height: 100vh; */
+    @media (max-width: 768px) {
+    padding: 1.5rem;
+    background-attachment: scroll;
+  }
     
    
 `;
@@ -39,6 +49,13 @@ export const RecipeCardContainer = styled.div`
     gap: 1rem;
     /* width: 100vw; */
     margin-top: 2rem;
+
+    @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+    
    
 `;
 
@@ -59,11 +76,20 @@ export const Cards = styled.div`
         height: 300px;
         border-radius: 2rem;
         border: 2px solid orange;
+
+    @media (max-width: 768px) {
+      /* width: 80%; */
+      /* height: auto; */
+    }
     }
 
     h1{
         color: antiquewhite;
         text-align: center;
+
+        @media (max-width: 768px) {
+      font-size: 1.2rem;
+    }
     }
 
     button{
@@ -80,6 +106,11 @@ export const Cards = styled.div`
           background-color: white;
           color: orange;
         }
+
+        @media (max-width: 768px) {
+             width: 4rem;
+             padding: 0.5rem;
+        }
         
     }
 
@@ -87,5 +118,12 @@ export const Cards = styled.div`
         transform: scale(1.01);
         box-shadow: 0px 2px  10px white;
     }
+
+
+    @media (max-width: 768px) {
+    width: 90%;
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
 `;
 
