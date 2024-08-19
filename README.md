@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# Rezept App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Demo
+https://rezept-app.vercel.app/
 
-## Available Scripts
+fest user: username: ayse
+            password: 1234 
 
-In the project directory, you can run:
+## Projekt Gif
+![rezept-app](https://github.com/user-attachments/assets/2548a25e-8a84-4891-b79d-83105934f22b)
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Purpose
 
-### `yarn test`
+The Rezept App is a recipe application that enables users to search for recipes by name or category and view detailed information about them, including ingredients, calorie values, and images. After logging in, users can easily browse through a wide range of recipes. This project was created to enhance skills in using React, Context API for state management, React Router for navigation, and Axios for data fetching.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Structure
 
-### `yarn build`
+```
+|-- Rezept-App
+|
+├── public
+│     └── index.html
+├── src
+│    ├── assets
+│    │       └── [images]
+│    │
+│    ├── components
+│    │   └── header
+│    │       ├── Form.jsx
+│    │       ├── Header.jsx
+│    │       └── style.jsx
+│    │
+│    ├── context
+│    │       └── [context files]
+│    │
+│    ├── navbar
+│    │       └── [navbar components]
+│    │
+│    ├── pages
+│    │   ├── about
+│    │   │   ├── About.jsx
+│    │   │   └── style.jsx
+│    │   ├── details
+│    │   │   ├── Details.jsx
+│    │   │   └── style.jsx
+│    │   ├── home
+│    │   │   ├── Home.jsx
+│    │   │   ├── Recipe.jsx
+│    │   │   ├── RecipeCard.jsx
+│    │   │   └── style.jsx
+│    │   └── login
+│    │       ├── Login.jsx
+│    │       └── style.jsx
+│    │
+│    ├── router
+│    │   ├── AppRouter.jsx
+│    │   └── PrivateRouter.jsx
+│    │
+│    ├── App.css
+│    ├── App.js
+│    ├── index.js
+│    └── index.css
+│
+├── .gitignore
+├── package.json
+├── yarn.lock
+└── README.md
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **User Authentication**: Implemented using the Context API. Users must log in to access recipe details. Unauthorized users are redirected to the login page.
+- **Recipe Search and Filtering**: Users can search for recipes by name and category. Data is fetched from an API using Axios.
+- **Recipe Details**: After selecting a recipe, users can view detailed information, including ingredients, calorie values, and images.
+- **Styled Components**: All styling is managed with Styled Components for a modular and maintainable design.
+- **State Management**: Context API is used to manage the global state for authentication and recipe data.
+- **Routing**: React Router is used for navigation between different pages. Programmatic navigation is handled using `useNavigate`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies Used
 
-### `yarn eject`
+- **ReactJS**: For building the user interface.
+  - **useState**: For managing local state within components.
+  - **useNavigate**: For programmatic navigation between routes.
+- **Styled Components**: For styling the application with modular, component-scoped styles.
+- **Context API**: Used for managing global state across the application.
+- **Axios**: For making HTTP requests to fetch data from an API.
+- **React Router**: For routing and navigation within the application.
+- **Local Storage**: To persist user authentication state and data, ensuring that user sessions are maintained even after page refreshes.
+- **Responsive Design**: The application is fully responsive and optimized for a variety of devices, from mobile phones to desktops.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## API
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The application fetches recipe data from an external API. Example endpoint:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- [Recipe API Endpoint](https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${meal})
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Outcome
 
-## Learn More
+Through this project, I enhanced my skills in the following areas:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Using **Styled Components** for modular and scalable styling in React.
+- Implementing **state management** using Context API.
+- Handling **authentication and authorization** in a React application.
+- Utilizing **React Router** for navigation and programmatic route changes.
+- Fetching and integrating data from APIs using **Axios**.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+These skills are fundamental for building robust and feature-rich React applications.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center"> 📝 Happy Coding! 🍴 </p>
